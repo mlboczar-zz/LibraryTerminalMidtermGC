@@ -3,6 +3,7 @@
  */
 public class MainLibraryApp {
     public static void main(String[] args) {
+        WelcomeMenu.selectMenuOption();
         System.out.println("Hello World!");
     }
 }
