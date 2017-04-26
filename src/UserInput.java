@@ -1,8 +1,7 @@
 ///**
 // * Created by Megan on 4/25/2017.
 // */
-//public class UserInput {
-//    public static void searchByAuthor() {
+//public static void searchByAuthor() {
 //        String userInput;
 //
 //    }
