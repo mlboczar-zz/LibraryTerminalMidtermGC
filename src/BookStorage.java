@@ -8,9 +8,17 @@ import java.util.Scanner;
 /**
  * Created by Marin on 4/25/2017.
  */
+
+
 public class BookStorage {
 
     public static void readFromFile() {
+
+        // Will be using Enhanced for loop instead (for each)
+
+//            for (int i = 0; i < books.length ; i++) {
+//                out.println(books[i]);
+//            }
 
         Path filePath = Paths.get("files/BookStorage.txt");
         File textFile = filePath.toFile();
@@ -32,19 +40,19 @@ public class BookStorage {
     }
 
     public static void writeToFile(Scanner s) {
+        System.out.println("Please enter the Title of the book: ");
+        String title = s.nextLine();
+        System.out.println("Please enter the Author of the book: ");
+        String author = s.nextLine();
+//        System.out.println("Please enter the Date it will be checked out: ");
+//        String status = Integer.parseInt(s.nextLine());
 
-        BookTest bookTest = new BookTest();
+        LibBooks book = new LibBooks(title, author);
         Path testPath = Paths.get("files/BookStorage.txt");
         File testFiles = testPath.toFile();
         try {
             PrintWriter out = new PrintWriter(new FileOutputStream(testFiles, true));
-
-            // Will be using Enhanced for loop instead (for each)
-
-//            for (int i = 0; i < books.length ; i++) {
-//                out.println(books[i]);
-//            }
-
+            out.println(book);
             out.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

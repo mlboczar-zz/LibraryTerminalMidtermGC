@@ -33,7 +33,7 @@ public class LibBooks {
 
     @Override
     public String toString() {
-        return title + "," + author + "," + status;
+        return title + ",\t" + author + ",\t" + status;
     }
 }
 

@@ -1,13 +1,2 @@
-
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
-Title:	Harry Potter		Author:	JK Rowling		Status:	On Shelf/Checked Out		Due:
+Harry Potter,	JK Rowling,	null
+Harry Potter,	JK Rowling,	null
