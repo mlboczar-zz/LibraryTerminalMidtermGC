@@ -44,8 +44,8 @@ public class BookStorage {
         String title = s.nextLine();
         System.out.println("Please enter the Author of the book: ");
         String author = s.nextLine();
-//        System.out.println("Please enter the Date it will be checked out: ");
-//        String status = Integer.parseInt(s.nextLine());
+//        String status = s.nextLine();
+//        String date = s.nextLine();
 
         LibBooks book = new LibBooks(title, author);
         Path testPath = Paths.get("files/BookStorage.txt");

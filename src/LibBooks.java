@@ -8,7 +8,6 @@ public class LibBooks {
     private boolean status;
 
 
-
     public LibBooks(String title, String author) {
         this.title = title;
         this.author = author;
