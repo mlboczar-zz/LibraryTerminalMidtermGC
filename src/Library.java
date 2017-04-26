@@ -1,14 +1,16 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
  * Created by nickk on 4/26/2017.
  */
-public class LIbrary {
+public class Library {
 
 
     private final List<LibBooks> books;
 
-    public LIbrary(List<LibBooks> books) {
+    public Library(List<LibBooks> books) {
         this.books = books;
     }
 
@@ -50,6 +52,16 @@ public class LIbrary {
             if (x.getAuthor().equalsIgnoreCase(author))
                 return x;
 
+        }
+        return null;
+    }
+
+    public LibBooks checkStatus(Boolean status) {
+        if (status) {
+            System.out.println("On Shelf");
+
+        } else if (status != true) {
+            System.out.println("Unavailable");
         }
         return null;
     }

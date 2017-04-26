@@ -5,8 +5,7 @@ public class LibBooks {
 
     private  String title;
     private  String author;
-    private String status;
-    private String date;
+    private boolean status;
 
 
     public LibBooks(String title, String author) {
@@ -14,6 +13,7 @@ public class LibBooks {
         this.author = author;
 
     }
+
 
     public String getTitle() {
         return title;
@@ -31,25 +31,17 @@ public class LibBooks {
         this.author = author;
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = "On Shelf";
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = "2 Weeks from now";
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     @Override
     public String toString() {
-        return "Title:\t" + title + "\t Author: " + author + "\t Status: " + "On Shelf" + "\t Due Date:" + "2 Weeks from now";
+        return "Title:\t" + title + "\t Author: " + author + "\t Status: " + status  + "On Shelf" + "\t Due Date:" + "2 Weeks from now";
     }
 }
 
