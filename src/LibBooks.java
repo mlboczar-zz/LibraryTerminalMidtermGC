@@ -9,10 +9,9 @@ public class LibBooks {
 
 
 
-    public LibBooks(String title, String author,boolean status) {
+    public LibBooks(String title, String author) {
         this.title = title;
         this.author = author;
-        this.status = status;
 
     }
 

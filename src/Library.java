@@ -5,12 +5,12 @@ import java.util.List;
 /**
  * Created by nickk on 4/26/2017.
  */
-public class LIbrary {
+public class Library {
 
 
     private final List<LibBooks> books;
 
-    public LIbrary(List<LibBooks> books) {
+    public Library(List<LibBooks> books) {
         this.books = books;
     }
 
@@ -57,10 +57,10 @@ public class LIbrary {
     }
 
     public LibBooks checkStatus(Boolean status) {
-        if (status == true) {
+        if (status) {
             System.out.println("On Shelf");
 
-        } else if (status == false) {
+        } else if (status != true) {
             System.out.println("Unavailable");
         }
         return null;
