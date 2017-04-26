@@ -3,8 +3,8 @@
  */
 public class LibBooks {
 
-    private final String title;
-    private final String author;
+    private  String title;
+    private  String author;
     private String status;
     private String date;
 
@@ -15,13 +15,20 @@ public class LibBooks {
 
     }
 
-
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getAuthor() {
         return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getStatus() {
