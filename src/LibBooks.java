@@ -6,13 +6,17 @@ public class LibBooks {
     private  String title;
     private  String author;
     private boolean status;
-    
+
 
 
     public LibBooks(String title, String author) {
         this.title = title;
         this.author = author;
 
+    }
+
+    public LibBooks(boolean status) {
+        this.status = status;
     }
 
     public String getTitle() {
