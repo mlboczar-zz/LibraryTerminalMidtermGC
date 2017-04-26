@@ -14,10 +14,7 @@ public class LibBooks {
         this.author = author;
 
     }
-
-    public LibBooks(boolean status) {
-        this.status = status;
-    }
+    
 
     public String getTitle() {
         return title;
@@ -40,12 +37,6 @@ public class LibBooks {
     }
 
     public void setStatus(boolean status) {
-        if (status == true) {
-            System.out.println("On Shelf");
-
-        } else if (status == false) {
-            System.out.println("Unavailable");
-        }
         this.status = status;
     }
 

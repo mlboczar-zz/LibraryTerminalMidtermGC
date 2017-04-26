@@ -56,6 +56,15 @@ public class LIbrary {
         return null;
     }
 
+    public LibBooks checkStatus(Boolean status) {
+        if (status == true) {
+            System.out.println("On Shelf");
+
+        } else if (status == false) {
+            System.out.println("Unavailable");
+        }
+        return null;
+    }
     //    private int dueDate;
 //    private String checkoutDate;
 //    private String bookStatus;
