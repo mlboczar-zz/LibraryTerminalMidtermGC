@@ -56,7 +56,7 @@ public class Library {
         return null;
     }
 
-    public LibBooks checkStatus(Boolean status) {
+    public static LibBooks checkStatus(Boolean status) {
         if (status) {
             System.out.println("On Shelf");
 
