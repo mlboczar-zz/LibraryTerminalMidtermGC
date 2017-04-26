@@ -40,7 +40,7 @@ public class LibBooks {
 
     @Override
     public String toString() {
-        return title + ",\t" + author + ",\t" + status;
+        return "Title:\t" + title + "\t Author: " + author + "\t Status: " + "On Shelf" + "\t Due Date:" + "2 Weeks from now";
     }
 }
 
