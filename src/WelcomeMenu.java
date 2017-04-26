@@ -24,19 +24,22 @@ public class WelcomeMenu {
 
             } else if (userInput == 6) {
 
+            } else if (userInput == 7) {
+
             } else System.out.println("That is not a valid option. Please select option 1-6");
-        } while (userInput != 6);
+        } while (userInput != 7);
         return userInput;
     }
 
     private static void displayOptions() {
         System.out.println("Please select one of the following options: ");
         System.out.println("1 - Display a list of books in the library");
-        System.out.println("2 - Search for a book by author");
-        System.out.println("3 - Search for a book by title keyword");
-        System.out.println("4 - Select a book from the list to check out");
-        System.out.println("5 - Return a book");
-        System.out.println("6 - Quit");
+        System.out.println("2 - Add a book to the library");
+        System.out.println("3 - Search for a book by author");
+        System.out.println("4 - Search for a book by title keyword");
+        System.out.println("5 - Select a book from the list to check out");
+        System.out.println("6 - Return a book");
+        System.out.println("7 - Quit");
     }
 
 }
