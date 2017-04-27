@@ -78,7 +78,7 @@ public class Library {
         boolean bookFound = false;
         for (LibBooks bookToReturn : books) {
             if (bookToReturn.getTitle().equalsIgnoreCase(userInput)) {
-                if (bookToReturn.getStatus()) {
+                if (!bookToReturn.getStatus()) {
                     System.out.println("You have returned the book!");
                     bookToReturn.setStatus(true);
                     System.out.println(bookToReturn);
