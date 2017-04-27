@@ -3,3 +3,4 @@ Harry Potter,	JK Rowling,	null
 Harry Potter,	JK Rowling,	nullnull
 Harry Potter,	JK Rowling,	null,	null
 Title:	Harry Potter	 Author: JK Rowling	 Status: On Shelf	 Due Date:2 Weeks from now
+Title:	Harry Potter	 Author: jk rowling	 Status: falseOn Shelf	 Due Date:2 Weeks from now
