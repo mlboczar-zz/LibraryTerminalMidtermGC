@@ -1,9 +1,6 @@
 //import java.util.ArrayList;
-<<<<<<< HEAD
 //import java.util.Scanner;
-=======
 //        import java.util.Scanner;
->>>>>>> 93e5652f793e680e9e44cd89d55bba2312c14736
 //
 ///**
 // * Created by Megan on 4/25/2017.
@@ -22,19 +19,18 @@
 //            } else if (userInput == 2) {
 //
 //            } else if (userInput == 3) {
-<<<<<<< HEAD
+
 //                //UserInput.searchByAuthor;searchByAuthor
 //            } else if (userInput == 4) {
 //               // UserInput
 //            } else if (userInput == 5) {
 //                Library.findByTitle;
-=======
 //                //UserInput.searchByAuthor;
 //            } else if (userInput == 4) {
 //                UserInput
 //            } else if (userInput == 5) {
 //                UserInput.selectABookToCheckOut();
->>>>>>> 93e5652f793e680e9e44cd89d55bba2312c14736
+//
 //            } else if (userInput == 6) {
 //                UserInput.returnABook();
 //            } else if (userInput == 7) {
