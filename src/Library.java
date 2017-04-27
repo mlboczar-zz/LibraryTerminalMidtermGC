@@ -55,24 +55,40 @@ public class Library {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the title of the book you would like to check out: ");
         String userInput = scan.nextLine();
-        List <LibBooks> bookList = BookStorage.readFromFile();
-        for (LibBooks x : bookList) {
-            if (x.getStatus()) {
-                if (x.getTitle().equalsIgnoreCase(userInput)) {
+        boolean bookFound = false;
+        for (LibBooks bookToCheckOut : books) {
+            if (bookToCheckOut.getTitle().equalsIgnoreCase(userInput)) {
+                if (bookToCheckOut.getStatus()) {
                     System.out.println("You have checked out the book!");
-                    x.setStatus(false);
+                    bookToCheckOut.setStatus(false);
+                    System.out.println(bookToCheckOut);
+                    bookFound = true;
+                } else {
+                    System.out.println("This book is already checked out!");
+                    bookFound = true;
                 }
-            } else System.out.println("This book is already checked out!");
-        }
+            }
+        } if (!bookFound) System.out.println("Book not found");
     }
 
     public void returnABook() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the title of the book you would like to return: ");
         String userInput = scan.nextLine();
-        if (BookStorage.readFromFile().contains(userInput)) {
-            System.out.println("Book has been returned!");
-        }
+        boolean bookFound = false;
+        for (LibBooks bookToReturn : books) {
+            if (bookToReturn.getTitle().equalsIgnoreCase(userInput)) {
+                if (bookToReturn.getStatus()) {
+                    System.out.println("You have returned the book!");
+                    bookToReturn.setStatus(true);
+                    System.out.println(bookToReturn);
+                    bookFound = true;
+                } else {
+                    System.out.println("This book is already on the shelf!");
+                    bookFound = true;
+                }
+            }
+        } if (!bookFound) System.out.println("Book not found");
 
     }
 

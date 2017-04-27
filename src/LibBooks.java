@@ -45,7 +45,7 @@ public class LibBooks {
         if (status) {
             sb.append("On Shelf");
         } else {
-            sb.append("Due Date: Two weeks from now");
+            sb.append("Checked Out \tDue Date: Two weeks from now");
         } return sb.toString();
     }
 }
