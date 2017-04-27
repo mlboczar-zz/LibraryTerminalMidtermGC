@@ -19,6 +19,22 @@ public class Library {
         }
     }
 
+    public void searchByAuthor() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the keyword of the author of the book: ");
+        String userInput = scan.nextLine();
+        boolean bookFound = false;
+        for (LibBooks x: books) {
+            if (x.getAuthor().contains(userInput)) {
+                System.out.println(x);
+                bookFound = true;
+            }
+        }
+        if (!bookFound) {
+            System.out.println("Book not found");
+        }
+    }
+
     public void searchByTitle() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the keyword of the title of the book: ");
@@ -30,21 +46,9 @@ public class Library {
                 bookFound = true;
             }
         }
-        if (bookFound == false) {
+        if (!bookFound) {
             System.out.println("Book not found");
         }
-    }
-
-    public void searchByAuthor() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the keyword of the author of the book: ");
-        String userInput = scan.nextLine();
-        for (LibBooks x: books) {
-            if (x.getAuthor().contains(userInput)) {
-                System.out.println(x);
-            }
-        }
-        System.out.println("Book not found");
     }
 
     public void selectABookToCheckOut() {
