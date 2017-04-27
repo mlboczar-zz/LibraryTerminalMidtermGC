@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 
 public class MainLibraryApp {
+
     public static void main(String[] args) {
         System.out.println("Welcome to the MNM Library!");
         Scanner scan = new Scanner(System.in);

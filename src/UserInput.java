@@ -28,7 +28,7 @@ public class UserInput {
         System.out.println("Please enter the keyword of the title of the book: ");
         String userInput = scan.nextLine();
         for (LibBooks x: bookList) {
-            if (x.getTitle().equalsIgnoreCase(userInput)) {
+            if (x.getTitle().contains(userInput)) {
                 System.out.println("Book was found");
                 return String.valueOf(x);
             }
@@ -41,7 +41,7 @@ public class UserInput {
         System.out.println("Please enter the keyword of the author of the book: ");
         String userInput = scan.nextLine();
         for (LibBooks x: bookList) {
-            if (x.getAuthor().equalsIgnoreCase(userInput)) {
+            if (x.getAuthor().contains(userInput)) {
                 System.out.println("Book was found");
                 return String.valueOf(x);
             }
