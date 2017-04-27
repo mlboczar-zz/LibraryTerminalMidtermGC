@@ -8,22 +8,41 @@ import java.util.Scanner;
 
 public class MainLibraryApp {
     public static void main(String[] args) {
-
-//        WelcomeMenu.selectMenuOption();
-
+        System.out.println("Welcome to the MNM Library!");
         Scanner scan = new Scanner(System.in);
-//        BookStorage.writeToFile(scan);
+        int userInput;
+        do {
+            displayOptions();
+            userInput = scan.nextInt();
+            if (userInput == 1) {
+                UserInput.printAllBooks();
+            } else if (userInput == 2) {
 
-        ArrayList<LibBooks> library = BookStorage.readFromFile();
-        for (int i = 0; i < library.size(); i++) {
-            String title = library.get(i).getTitle();
-            String author = library.get(i).getAuthor();
-            System.out.println("\"" + title + "\"" + author);
-        }
-        BookStorage.readFromFile();
-        System.out.println();
-        UserInput.searchByTitle(library, scan);
-        UserInput.searchByAuthor(library, scan);
-
+            } else if (userInput == 3) {
+                ArrayList<LibBooks> library = BookStorage.readFromFile();
+                UserInput.searchByAuthor(library, scan);
+            } else if (userInput == 4) {
+                ArrayList<LibBooks> library = BookStorage.readFromFile();
+                UserInput.searchByTitle(library, scan);
+            } else if (userInput == 5) {
+                UserInput.selectABookToCheckOut();
+            } else if (userInput == 6) {
+                UserInput.returnABook();
+            } else if (userInput == 7) {
+                System.out.println("Thanks for visiting our library!");
+            } else System.out.println("That is not a valid option. Please select option 1-6");
+        } while (userInput != 7);
     }
+
+    private static void displayOptions() {
+        System.out.println("Please select one of the following options: ");
+        System.out.println("1 - Display a list of books in the library");
+        System.out.println("2 - Add a book to the library");
+        System.out.println("3 - Search for a book by author");
+        System.out.println("4 - Search for a book by title keyword");
+        System.out.println("5 - Select a book from the list to check out");
+        System.out.println("6 - Return a book");
+        System.out.println("7 - Quit");
+    }
+
 }

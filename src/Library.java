@@ -15,7 +15,7 @@ public class Library {
     }
 
     List<LibBooks> loadBooks() {
-        books.add(new LibBooks("Java for Dummies", "Antonella"));
+//        books.add(new LibBooks("Java for Dummies", "Antonella"));
 //        books.add(new LibBooks("Captain Underpants", "Dav Pilkey"));
 //        books.add(new LibBooks("IT", "Stephen King"));
 //        books.add(new LibBooks("To Kill a Mockingbird", "Harper Lee"));
