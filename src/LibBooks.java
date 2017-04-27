@@ -5,7 +5,7 @@ public class LibBooks {
 
     private String title;
     private String author;
-    private boolean status;
+    private boolean status = true;
 
 
     public LibBooks(String title, String author) {
@@ -40,6 +40,12 @@ public class LibBooks {
 
     @Override
     public String toString() {
-        return "Title:\t" + title + "\t Author: " + author + "\t Status: " + status  + "On Shelf" + "\t Due Date:" + "2 Weeks from now";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Title: " + title + "\t Author: " + author + "\t Status: ");
+        if (status) {
+            sb.append("On Shelf");
+        } else {
+            sb.append("Due Date: Two weeks from now");
+        } return sb.toString();
     }
 }

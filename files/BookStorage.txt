@@ -1,4 +1,12 @@
-Harry Potter,	JK Rowling,	null,
-Harry Potter,	JK Rowling,	null,
-Harry Potter,	JK Rowling,	null, null,
-Harry Potter,	JK Rowling,	null,	null,
+Java for Dummies,Antonella
+Captain Underpants,Dav Pilkey
+IT,Stephen King
+To Kill a Mockingbird,Harper Lee
+The Da Vinci Code,Dan Brown
+A Tale of Two Cities,Charles Dickens
+The Hobbit,J.R.R. Tolkien
+Think and Grow Rich,Napolean Hill
+Charlotte's Web,EB White
+Catcher in the Rye,J.D. Salinger
+Black Beauty,Anna Sewell
+Gone with the Wind,Margaret Mitchell

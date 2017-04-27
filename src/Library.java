@@ -1,12 +1,11 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by nickk on 4/26/2017.
  */
 public class Library {
-
 
     private final List<LibBooks> books;
 
@@ -14,87 +13,61 @@ public class Library {
         this.books = books;
     }
 
-    List<LibBooks> loadBooks() {
-//        books.add(new LibBooks("Java for Dummies", "Antonella"));
-//        books.add(new LibBooks("Captain Underpants", "Dav Pilkey"));
-//        books.add(new LibBooks("IT", "Stephen King"));
-//        books.add(new LibBooks("To Kill a Mockingbird", "Harper Lee"));
-//        books.add(new LibBooks("The Da Vinci Code", "Dan Brown"));
-//        books.add(new LibBooks("A Tale of Two Cities", "Charles Dickens"));
-//        books.add(new LibBooks("The Hobbit", "J.R.R. Tolkien"));
-//        books.add(new LibBooks("Think and Grow Rich", "Napolean Hill"));
-//        books.add(new LibBooks("Charlotte's Web", "EB White"));
-//        books.add(new LibBooks("Catcher in the Rye", "J.D. Salinger"));
-//        books.add(new LibBooks("Black Beauty", "Anna Sewell"));
-//        books.add(new LibBooks("Gone with the Wind", "Margaret Mitchell"));
-        return books;
-    }
-
-
-    public boolean addBook(LibBooks books) {
-        if (books != null && !books.equals("")) {
-            throw new IllegalArgumentException("Must input a valid book!");
+    public void printAllBooks() {
+        ArrayList<LibBooks> readFromFile = BookStorage.readFromFile();
+        for (int i = 0; i < readFromFile.size(); i++) {
+            String b = readFromFile.get(i).getTitle();
+            String a = readFromFile.get(i).getAuthor();
+            System.out.println("\"" + b + "\"" + " by " + a);
         }
-        loadBooks().add(books);
-        return true;
+        System.out.println();
     }
 
-    public LibBooks findByTitle(String title) {
-        for (LibBooks x : books) {
-            if (x.getTitle().equalsIgnoreCase(title)) ;
-            return x;
+    public void searchByTitle(Scanner scan) {
+        System.out.println("Please enter the keyword of the title of the book: ");
+        String userInput = scan.nextLine();
+        for (LibBooks x: books) {
+            if (x.getTitle().contains(userInput)) {
+                System.out.println(x);
+            }
         }
-        return null;
+        System.out.println("Book not found");
     }
 
-    public LibBooks findByAuthor(String author) {
-        for (LibBooks x : books) {
-            if (x.getAuthor().equalsIgnoreCase(author))
-                return x;
-
+    public void searchByAuthor(Scanner scan) {
+        System.out.println("Please enter the keyword of the author of the book: ");
+        String userInput = scan.nextLine();
+        for (LibBooks x: books) {
+            if (x.getAuthor().contains(userInput)) {
+                System.out.println(x);
+            }
         }
-        return null;
+        System.out.println("Book not found");
     }
 
-    public static boolean checkStatus(Boolean status) {
-        if (status) {
-            return status;
-
-        } else if (status != true) {
-            return status;
+    public void selectABookToCheckOut() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the title of the book you would like to check out: ");
+        String userInput = scan.nextLine();
+        List <LibBooks> bookList = BookStorage.readFromFile();
+        for (LibBooks x : bookList) {
+            if (x.getStatus()) {
+                if (x.getTitle().equalsIgnoreCase(userInput)) {
+                    System.out.println("You have checked out the book!");
+                    x.setStatus(false);
+                }
+            } else System.out.println("This book is already checked out!");
         }
-        return false;
     }
 
-    //    private int dueDate;
-//    private String checkoutDate;
-//    private String bookStatus;
+    public void returnABook() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the title of the book you would like to return: ");
+        String userInput = scan.nextLine();
+        if (BookStorage.readFromFile().contains(userInput)) {
+            System.out.println("Book has been returned!");
+        }
 
-
-//    public int getDueDate() {
-//        return dueDate;
-//    }
-
-//    public void setDueDate(int dueDate) {
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//        Calendar c = Calendar.getInstance();
-//        c.setTime(new Date()); // Now use today date.
-//        c.add(Calendar.DATE, 14); // Adding 5 days
-//        String output = sdf.format(c.getTime());
-//        System.out.println(output);
-//        this.dueDate = dueDate;
-//}
-
-//    public String getCheckoutDate() {
-//        return checkoutDate;
-//    }
-//
-//    public void setCheckoutDate(String checkoutDate) {
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-//        LocalDate localDate = LocalDate.now();
-//        System.out.println(dtf.format(localDate));
-//        this.checkoutDate = checkoutDate;
-//    }
-
+    }
 
 }
