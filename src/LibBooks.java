@@ -3,15 +3,14 @@
  */
 public class LibBooks {
 
-    private  String title;
-    private  String author;
+    private String title;
+    private String author;
     private boolean status;
 
 
     public LibBooks(String title, String author) {
         this.title = title;
         this.author = author;
-
     }
 
 
