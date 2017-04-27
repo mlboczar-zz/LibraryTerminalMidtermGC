@@ -7,26 +7,26 @@ import java.util.Scanner;
 public class WelcomeMenu {
 
     public static int selectMenuOption() {
-        System.out.println("Welcome to the Grand Circus Library!");
+        System.out.println("Welcome to the MNM Library!");
         Scanner scan = new Scanner(System.in);
         int userInput;
         do {
             displayOptions();
             userInput = scan.nextInt();
             if (userInput == 1) {
-
+                UserInput.printAllBooks;
             } else if (userInput == 2) {
-
+                UserInput.addABookToLibrary;
             } else if (userInput == 3) {
-
+                UserInput.searchByAuthor;
             } else if (userInput == 4) {
-
+                UserInput.searchByTitle;
             } else if (userInput == 5) {
-
+                UserInput.selectABookToCheckOut();
             } else if (userInput == 6) {
-
+                UserInput.returnABook();
             } else if (userInput == 7) {
-
+                System.out.println("Thanks for visiting our library!");
             } else System.out.println("That is not a valid option. Please select option 1-6");
         } while (userInput != 7);
         return userInput;
