@@ -65,6 +65,29 @@ public class Library {
         }
         return null;
     }
+    public static void selectABookToCheckOut() {
+
+            System.out.println("Please enter the title of the book you would like to check out: ");
+            String userInput = scan.nextLine();
+            if (BookStorage.readFromFile(userInput).toString().contains(userInput) && checkStatus(true)) {
+                System.out.println("You have checked out the Book!");
+                checkStatus(false);
+            } else if (BookStorage.readFromFile(userInput).toString().contains(userInput) && checkStatus(false)) {
+                System.out.println("Book is already check out!");
+            } else {
+                System.out.println("Book not found, Please enter another book!");
+            }
+    }
+
+    public static void returnABook() {
+        System.out.println("Please enter the title of the book you would like to return: ");
+        String userInput = scan.nextLine();
+        if (BookStorage.readFromFile(userInput).toString().contains(userInput) && checkStatus(false)) {
+            System.out.println("Book has been returned!");
+            checkStatus(true);
+        }
+
+    }
     //    private int dueDate;
 //    private String checkoutDate;
 //    private String bookStatus;
