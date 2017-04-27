@@ -44,5 +44,3 @@ public class LibBooks {
         return "Title:\t" + title + "\t Author: " + author + "\t Status: " + status  + "On Shelf" + "\t Due Date:" + "2 Weeks from now";
     }
 }
-
-

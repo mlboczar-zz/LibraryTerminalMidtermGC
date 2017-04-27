@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,9 +13,8 @@ import java.util.Scanner;
 
 public class BookStorage {
 
-
-    public static ArrayList<LibBooks> readFromFile (String textFile){
-        List<LibBooks> books = new ArrayList<LibBooks>();
+    public static ArrayList<LibBooks> readFromFile(){
+        ArrayList<LibBooks> books = new ArrayList<LibBooks>();
 
         Path filePath = Paths.get("files/BookStorage.txt");
         File file = filePath.toFile();
@@ -26,10 +24,15 @@ public class BookStorage {
             try {
                 String line = reader.readLine();
                 while (line != null) {
-                    line = reader.readLine();
-                    String[] book = line.split("\\t");
+
+                    String[] book = line.split(",");
                     LibBooks bookObject = new LibBooks(book[0],book[1]);
                     books.add (bookObject);
+
+                    for (int i = 0; i < books.size(); i++) {
+                        LibBooks L = books.get(i);
+                    }
+                    line = reader.readLine();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -43,11 +46,12 @@ public class BookStorage {
     public static void writeToFile(Scanner s) {
 //          This part is being sunsetted, we don't need the input to be here
 //          System.out.println("Please enter the Title of the book: ");
-          String title = s.nextLine();
 //          System.out.println("Please enter the Author of the book: ");
-          String author = s.nextLine();
 ////        String status = s.nextLine();
 ////        String date = s.nextLine();
+
+        String title = s.nextLine();
+        String author = s.nextLine();
 
         LibBooks book = new LibBooks(title, author);
         Path testPath = Paths.get("files/BookStorage.txt");
