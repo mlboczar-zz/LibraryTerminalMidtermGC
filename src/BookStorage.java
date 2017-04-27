@@ -29,9 +29,9 @@ public class BookStorage {
                     LibBooks bookObject = new LibBooks(book[0],book[1]);
                     books.add (bookObject);
 
-                    for (int i = 0; i < books.size(); i++) {
-                        LibBooks L = books.get(i);
-                    }
+//                    for (int i = 0; i < books.size(); i++) {
+//                        LibBooks L = books.get(i);
+//                    }
                     line = reader.readLine();
                 }
             } catch (IOException e) {
