@@ -47,6 +47,7 @@ public class BookStorage {
 //          This part is being sunsetted, we don't need the input to be here
 //          System.out.println("Please enter the Title of the book: ");
 //          System.out.println("Please enter the Author of the book: ");
+
 ////        String status = s.nextLine();
 ////        String date = s.nextLine();
 

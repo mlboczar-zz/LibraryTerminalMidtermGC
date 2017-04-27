@@ -9,7 +9,12 @@ import java.util.Scanner;
 public class MainLibraryApp {
     public static void main(String[] args) {
 
+
         WelcomeMenu.selectMenuOption();
+
+//        WelcomeMenu.selectMenuOption();
+//        System.out.println("Hello World!");
+
 
 //        Scanner scan = new Scanner(System.in);
 //        BookStorage.writeToFile(scan);
