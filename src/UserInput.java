@@ -6,15 +6,18 @@ import java.util.Scanner;
  */
 public class UserInput {
     Scanner scan = new Scanner(System.in);
-    public void printAllBooks() {
-        ArrayList<books> readFromFile = BookStorage.readFromFile();
-        for (int i = 0; i < books.size(); i++) {
-            String a = readFromFile.get(i).getAuthor;
-            String t = readFromFile.get(i).getTitle;
-            System.out.println(t + " written by " + a);
+
+    public static void printAllBooks() {
+        ArrayList<LibBooks> readFromFile = BookStorage.readFromFile();
+        for (int i = 0; i < readFromFile.size(); i++) {
+            String b = readFromFile.get(i).getTitle();
+            String a = readFromFile.get(i).getAuthor();
+            System.out.println("\"" + b + "\"" + " by " + a);
         }
-        }
+        BookStorage.readFromFile();
+        System.out.println();
     }
+
 
     public void addABookToLibrary() {
 

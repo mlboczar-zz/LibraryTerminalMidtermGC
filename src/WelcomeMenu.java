@@ -14,9 +14,9 @@ public class WelcomeMenu {
             displayOptions();
             userInput = scan.nextInt();
             if (userInput == 1) {
-                UserInput.printAllBooks;
+                UserInput.printAllBooks();
             } else if (userInput == 2) {
-                UserInput.addABookToLibrary;
+
             } else if (userInput == 3) {
                 UserInput.searchByAuthor;
             } else if (userInput == 4) {
