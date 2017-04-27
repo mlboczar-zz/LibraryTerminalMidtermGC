@@ -29,9 +29,9 @@ public class BookStorage {
                     LibBooks bookObject = new LibBooks(book[0],book[1]);
                     books.add (bookObject);
 
-                    for (int i = 0; i < books.size(); i++) {
-                        LibBooks L = books.get(i);
-                    }
+//                    for (int i = 0; i < books.size(); i++) {
+//                        LibBooks L = books.get(i);
+//                    }
                     line = reader.readLine();
                 }
             } catch (IOException e) {
@@ -47,6 +47,7 @@ public class BookStorage {
 //          This part is being sunsetted, we don't need the input to be here
 //          System.out.println("Please enter the Title of the book: ");
 //          System.out.println("Please enter the Author of the book: ");
+
 ////        String status = s.nextLine();
 ////        String date = s.nextLine();
 

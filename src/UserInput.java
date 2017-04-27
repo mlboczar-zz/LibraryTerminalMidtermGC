@@ -23,24 +23,29 @@ public class UserInput {
 
     }
 
-//    public void searchByAuthor() {
-//        System.out.println("Please enter the author of the book: ");
-//        String userInput = scan.nextLine();
-//        if (BookStorage.readFromFile().toString().contains(userInput)){
-//            for (:) {
-//
-//            }
-//        }
-//
-//    }
 
-    public String searchByTitle() {
-        System.out.println("Please enter the a keyword of the title of the book: ");
+    public static String searchByTitle(ArrayList<LibBooks> bookList, Scanner scan) {
+        System.out.println("Please enter the keyword of the title of the book: ");
         String userInput = scan.nextLine();
-        for (LibBooks x:BookStorage.readFromFile()) {
+        for (LibBooks x: bookList) {
             if (x.getTitle().equalsIgnoreCase(userInput)) {
+                System.out.println("Book was found");
                 return String.valueOf(x);
             }
+            System.out.println("Book not found");
+        }
+        return null;
+    }
+
+    public static String searchByAuthor(ArrayList<LibBooks> bookList, Scanner scan) {
+        System.out.println("Please enter the keyword of the author of the book: ");
+        String userInput = scan.nextLine();
+        for (LibBooks x: bookList) {
+            if (x.getAuthor().equalsIgnoreCase(userInput)) {
+                System.out.println("Book was found");
+                return String.valueOf(x);
+            }
+            System.out.println("Book not found");
         }
         return null;
     }
