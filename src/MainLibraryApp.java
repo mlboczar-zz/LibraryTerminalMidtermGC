@@ -19,9 +19,9 @@ public class MainLibraryApp {
             if (userInput == 1) {
                 library.printAllBooks();
             } else if (userInput == 2) {
-                library.searchByAuthor(scan);
+                library.searchByAuthor();
             } else if (userInput == 3) {
-                library.searchByTitle(scan);
+                library.searchByTitle();
             } else if (userInput == 4) {
                 library.selectABookToCheckOut();
             } else if (userInput == 5) {

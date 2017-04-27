@@ -14,27 +14,29 @@ public class Library {
     }
 
     public void printAllBooks() {
-        ArrayList<LibBooks> readFromFile = BookStorage.readFromFile();
-        for (int i = 0; i < readFromFile.size(); i++) {
-            String b = readFromFile.get(i).getTitle();
-            String a = readFromFile.get(i).getAuthor();
-            System.out.println("\"" + b + "\"" + " by " + a);
+        for (LibBooks book : books) {
+            System.out.println(book);
         }
-        System.out.println();
     }
 
-    public void searchByTitle(Scanner scan) {
+    public void searchByTitle() {
+        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the keyword of the title of the book: ");
         String userInput = scan.nextLine();
+        boolean bookFound = false;
         for (LibBooks x: books) {
             if (x.getTitle().contains(userInput)) {
                 System.out.println(x);
+                bookFound = true;
             }
         }
-        System.out.println("Book not found");
+        if (bookFound == false) {
+            System.out.println("Book not found");
+        }
     }
 
-    public void searchByAuthor(Scanner scan) {
+    public void searchByAuthor() {
+        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the keyword of the author of the book: ");
         String userInput = scan.nextLine();
         for (LibBooks x: books) {
