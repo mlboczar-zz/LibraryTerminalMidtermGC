@@ -23,21 +23,26 @@ public class UserInput {
 
     }
 
-    public void searchByAuthor() {
-        System.out.println("Please enter the author of the book: ");
-        String userInput = scan.nextLine();
-        if (BookStorage.readFromFile().toString().contains(userInput)){
-            System.out.println();
-        }
-
-    }
+//    public void searchByAuthor() {
+//        System.out.println("Please enter the author of the book: ");
+//        String userInput = scan.nextLine();
+//        if (BookStorage.readFromFile().toString().contains(userInput)){
+//            for (:) {
+//
+//            }
+//        }
+//
+//    }
 
     public String searchByTitle() {
-        System.out.println("Please enter a title keyword: ");
+        System.out.println("Please enter the a keyword of the title of the book: ");
         String userInput = scan.nextLine();
-        if (BookStorage.readFromFile().toString().contains(userInput)){
-            System.out.println();
+        for (LibBooks x:BookStorage.readFromFile()) {
+            if (x.getTitle().equalsIgnoreCase(userInput)) {
+                return String.valueOf(x);
+            }
         }
+        return null;
     }
 
     public static void selectABookToCheckOut() {
@@ -58,10 +63,11 @@ public class UserInput {
 
     }
 
-    public void returnABook() {
+    public static void returnABook() {
+        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the title of the book you would like to return: ");
         String userInput = scan.nextLine();
-        if (BookStorage.readFromFile(userInput).toString().contains(userInput) && Library.checkStatus(false)) {
+        if (BookStorage.readFromFile().toString().contains(userInput)) {
             System.out.println("Book has been returned!");
             Library.checkStatus(true);
         }

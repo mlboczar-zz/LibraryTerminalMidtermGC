@@ -20,11 +20,11 @@ public class WelcomeMenu {
             } else if (userInput == 3) {
                 //UserInput.searchByAuthor;
             } else if (userInput == 4) {
-                //UserInput.searchByTitle;
+                UserInput
             } else if (userInput == 5) {
                 UserInput.selectABookToCheckOut();
             } else if (userInput == 6) {
-                //UserInput.returnABook();
+                UserInput.returnABook();
             } else if (userInput == 7) {
                 System.out.println("Thanks for visiting our library!");
             } else System.out.println("That is not a valid option. Please select option 1-6");
