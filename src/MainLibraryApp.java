@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class MainLibraryApp {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the MNM Library!");
+        System.out.println("Welcome to the MNM Library!"
+                + "\n---------------------------");
         Scanner scan = new Scanner(System.in);
         Library library = new Library(BookStorage.readFromFile());
         int userInput;
         do {
-//            displayOptions();
             userInput = Validator.getInt(scan,
                     "Please select one of the following options:"
                             + "\n1 - Display a list of books in the library"
