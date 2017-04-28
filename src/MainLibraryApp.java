@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -36,16 +35,6 @@ public class MainLibraryApp {
             } else if (userInput == 6) {
                 System.out.println("Thanks for visiting our library!");
             }
-//            } else System.out.println("That is not a valid option. Please select option 1-6");
         } while (userInput != 6);
-
-//    private static void displayOptions() {
-//        System.out.println("Please select one of the following options: ");
-//        System.out.println("1 - Display a list of books in the library");
-//        System.out.println("2 - Search for a book by author");
-//        System.out.println("3 - Search for a book by title keyword");
-//        System.out.println("4 - Select a book from the list to check out");
-//        System.out.println("5 - Return a book");
-//        System.out.println("6 - Quit");
     }
 }
