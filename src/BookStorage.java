@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 /**
- * Created by Marin on 4/25/2017.
+ * Created by Marin, Megan, Nick on 4/25/2017.
  */
 
 

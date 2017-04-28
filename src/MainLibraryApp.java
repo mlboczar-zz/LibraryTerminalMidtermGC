@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by Megan on 4/25/2017.
+ * Created by Megan, Marin, Nick on 4/25/2017.
  */
 
 public class MainLibraryApp {
@@ -13,6 +13,7 @@ public class MainLibraryApp {
         Library library = new Library(BookStorage.readFromFile());
         int userInput;
         do {
+            //Implementing Validator class: github.com/grandcircusco/java_april2017/tree/master/Resources
             userInput = Validator.getInt(scan,
                     "Please select one of the following options:"
                             + "\n1 - Display a list of books in the library"

@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by nickk on 4/26/2017.
+ * Created by nickk, Megan, Marin on 4/26/2017.
  */
 public class Library {
 

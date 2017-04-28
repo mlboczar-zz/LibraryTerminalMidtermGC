@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by Marin on 4/25/2017.
+ * Created by on 4/25/2017.
  */
 
 public class Validator {
